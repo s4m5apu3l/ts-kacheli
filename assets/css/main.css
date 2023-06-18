@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Halvar";
+  src: url("../fonts/HalvarBreit-Blk.woff") format("woff"),
+    url("../fonts/HalvarBreit-Blk.woff2") format("woff2");
+
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Halvar";
+  src: url("../fonts/HalvarBreit-Md.woff") format("woff"),
+    url("../fonts/HalvarBreit-Md.woff2") format("woff2");
+
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Halvar";
+  src: url("../fonts/HalvarBreit-Rg.woff") format("woff"),
+    url("../fonts/HalvarBreit-Rg.woff2") format("woff2");
+
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Actay";
+  src: url("../fonts/Actay-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Actay";
+  src: url("../fonts/ActayWide-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Halvar', sans-serif;
+  background-color: #151515;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.l-wrapper {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 178px;
+}
+
+a {
+  font-family: 'Halvar', sans-serif;
+}
