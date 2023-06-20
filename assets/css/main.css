@@ -98,3 +98,33 @@ a {
 .counter span:last-child {
   opacity: 0.3;
 }
+
+.js-swiper-news__next,
+.js-swiper-news__prev {
+  position: unset !important;
+  margin-top: unset !important;
+}
+
+.bg-kacheli-photo {
+  background: url('../img/bg-kacheli.png') no-repeat center/cover;
+  
+}
+
+.img-border img {
+  position: relative;
+  z-index: 10;
+}
+.img-border::before {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #C3C3C3;
+}
+
+.img-border:hover:before {
+  background: #C32E44;
+}

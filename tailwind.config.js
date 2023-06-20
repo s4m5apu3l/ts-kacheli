@@ -8,6 +8,8 @@ module.exports = {
         current: 'currentColor',
         'main': '#C32E44',
         'white': '#F3F2EA',
+        'black': '#000000',
+        
       },
     },
   },

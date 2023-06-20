@@ -24,3 +24,15 @@ swiper.on("slideChange afterInit init", function () {
 });
 
 swiper.init();
+
+
+
+let swiperNewsMainPage = new Swiper(".js-swiper-news", {
+	slidesPerView: 3,
+	spaceBetween: 0,
+  navigation: {
+    nextEl: ".js-swiper-news__next",
+    prevEl: ".js-swiper-news__prev ",
+  },
+	
+});
