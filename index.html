@@ -6,35 +6,148 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ТЦ Качели</title>
-  <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
+
   <link rel="stylesheet" href="/dist/output.css">
-  <!-- <script src="https://cdn.tailwindcss.com"></script>npx tailwindcss init -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
 </head>
 
 <body>
-  <header class="pt-[39px]">
+  <header class="pt-[39px] pb-[30px]">
     <div class="l-wrapper">
       <div class="flex justify-between gap-[10px] items-center">
         
-        <div class="flex items-center justify-center">
+        <a href="/" class="flex items-center justify-center">
           <img src="./assets/img/logo.svg" alt="Логотип Качели">
-        </div>
+        </a>
 
         <nav class=" flex items-center">
-          <a href="#" class="text-base leading-[19px] text-[#C32E44] font-bold px-[20px] border-[#2D2D2D] border-l">ФУД-КОРТ</a>
-          <a href="#" class="text-base leading-[19px] text-[#C32E44] font-bold px-[20px] border-[#2D2D2D] border-l">СХЕМА МФК</a>
-          <a href="#" class="text-base leading-[19px] text-[#C32E44] font-bold px-[20px] border-[#2D2D2D] border-l border-r">КОНТАКТЫ</a>
+          <a href="#" class="text-base leading-[19px] transition-all duration-200 text-white hover:text-main font-bold px-[20px] border-[#2D2D2D] border-l">ФУД-КОРТ</a>
+          <a href="#" class="text-base leading-[19px] transition-all duration-200 text-white hover:text-main font-bold px-[20px] border-[#2D2D2D] border-l">СХЕМА МФК</a>
+          <a href="#" class="text-base leading-[19px] transition-all duration-200 text-white hover:text-main font-bold px-[20px] border-[#2D2D2D] border-l border-r">КОНТАКТЫ</a>
         </nav>
 
-        <div class="flex items-center"></div>
+        <div class="flex items-center gap-[30px]">
+          <div class="flex items-center gap-[11px]">
+            <img src="./assets/img/time.svg" alt="">
+            <span class="text-white text-base font-bold">09:00 – 22:00</span>
+          </div>
+
+          <a href="#" class="border-[3px] border-white px-[30px] py-[20px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200"> Арендаторам</a>
+        </div>
 
       </div>
 
     </div>
   </header>
-  <main></main>
+  <main>
+    <section class="">
+      <div class="js-main-banner swiper max-w-[1180px] h-[650px] w-full">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="flex flex-col items-start justify-center px-[80px] py-[40px] w-full h-full">
+              <img class="object-cover w-full h-full absolute left-0 right-0 top-0 bottom-0 z-[-1]" src="./assets/img/banner.png" alt="">
+              <span class="text-white text-[40px] leading-[46px] font-bold">
+                НОВОЕ ПОСТУПЛЕНИЕ
+              </span>
+              <span class="text-white text-[20px]  font-bold mt-[5px]">
+                TOM FORD, 3 ЭТАЖ
+              </span>
+
+              <div class="mt-[32px]" >
+                <a href="#" class="block border-[3px] border-white px-[30px] py-[20px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="flex flex-col items-start justify-center px-[80px] py-[40px] w-full h-full">
+              <img class="object-cover w-full h-full absolute left-0 right-0 top-0 bottom-0 z-[-1]" src="https://placehold.co/600x400" alt="">
+              <span class="text-white text-[40px] leading-[46px] font-bold">
+                НОВОЕ ПОСТУПЛЕНИЕ
+              </span>
+              <span class="text-white text-[20px]  font-bold mt-[5px]">
+                TOM FORD, 3 ЭТАЖ
+              </span>
+
+              <div class="mt-[32px]" >
+                <a href="#" class="block border-[3px] border-white px-[30px] py-[20px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="flex flex-col items-start justify-center px-[80px] py-[40px] w-full h-full">
+              <img class="object-cover w-full h-full absolute left-0 right-0 top-0 bottom-0 z-[-1]" src="https://placehold.co/600x400" alt="">
+              <span class="text-white text-[40px] leading-[46px] font-bold">
+                НОВОЕ ПОСТУПЛЕНИЕ
+              </span>
+              <span class="text-white text-[20px]  font-bold mt-[5px]">
+                TOM FORD, 3 ЭТАЖ
+              </span>
+
+              <div class="mt-[32px]">
+                <a href="#" class="block border-[3px] border-white px-[30px] py-[20px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="z-10 absolute bottom-[40px] left-[80px] w-[220px] justify-center flex items-center ">
+          <div class="js-main-banner__next css-btn__next swiper-button-next"></div>
+          <div class="js-main-banner__prev css-btn__prev swiper-button-prev"></div>
+          <div class="counter text-white"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-[160px]">
+      <div class="l-wrapper">
+        <div class="flex justify-between items-center ">
+
+          <div class="flex gap-[45px] items-center">
+            <div class="w-[35px] h-[35px] bg-white"></div>
+            <h2 class="text-[40px] font-bold text-white">
+              НОВОСТИ, АКЦИИ И СКИДКИ
+            </h2>
+          </div>
+
+          <div class="flex items-center gap-[20px] relative">
+            <div class="js-swiper-news__next swiper-button-next css-btn__next"></div>
+            <div class="js-swiper-news__prev swiper-button-prev css-btn__prev"></div>
+          </div>
+
+        </div>
+
+        <div class="mt-[80px]">
+          <div class="swiper js-swiper-news">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="w-full h-full relative">
+                  <img class="" src="./assets/img/news1.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer></footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 
