@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* npx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch */
+
 @font-face {
   font-family: "Halvar";
-  src: url("../fonts/HalvarBreit-Blk.woff") format("woff"),
-    url("../fonts/HalvarBreit-Blk.woff2") format("woff2");
+  src: url("../assets/fonts/HalvarBreit-Bd.woff") format("woff"),
+    url("../assets/fonts/HalvarBreit-Bd.woff2") format("woff2");
 
   font-weight: 700;
 }
@@ -34,6 +36,7 @@
   font-weight: 700;
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -55,4 +58,43 @@ body {
 
 a {
   font-family: 'Halvar', sans-serif;
+}
+
+.js-main-banner {
+  overflow: visible !important;
+}
+
+.swiper-button-next.css-btn__next {
+  background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.5' y='1.5' width='47' height='47' rx='23.5' stroke='%23F3F2EA' stroke-width='3'/%3E%3Cpath d='M22.5313 12.7413L31.7205 21.9306C32.1237 22.3336 32.4435 22.8121 32.6617 23.3388C32.8799 23.8655 32.9922 24.4299 32.9922 25C32.9922 25.5701 32.8799 26.1346 32.6617 26.6612C32.4435 27.1879 32.1237 27.6664 31.7205 28.0695L22.5313 37.2587L18.849 33.5747L27.4306 25L18.856 16.4254L22.5313 12.7413Z' fill='%23F3F2EA'/%3E%3C/svg%3E%0A")
+  no-repeat;
+  width: 50px;
+  height: 50px;
+}
+.swiper-button-prev.css-btn__prev {
+  background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.5' y='1.5' width='47' height='47' rx='23.5' stroke='%23F3F2EA' stroke-width='3'/%3E%3Cpath d='M22.5313 12.7413L31.7205 21.9306C32.1237 22.3336 32.4435 22.8121 32.6617 23.3388C32.8799 23.8655 32.9922 24.4299 32.9922 25C32.9922 25.5701 32.8799 26.1346 32.6617 26.6612C32.4435 27.1879 32.1237 27.6664 31.7205 28.0695L22.5313 37.2587L18.849 33.5747L27.4306 25L18.856 16.4254L22.5313 12.7413Z' fill='%23F3F2EA'/%3E%3C/svg%3E%0A")
+  no-repeat;
+  transform: rotate(180deg);
+  width: 50px;
+  height: 50px;
+}
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.counter {
+  margin-top: 5px;
+}
+
+.counter span {
+  font-size: 30px;
+  line-height: 35px;
+  color: #F3F2EA;
+  font-weight: 700;
+}
+
+.counter span:last-child {
+  opacity: 0.3;
 }

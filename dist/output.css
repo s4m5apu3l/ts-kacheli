@@ -522,8 +522,100 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-\[40px\] {
+  bottom: 40px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.left-\[80px\] {
+  left: 80px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-\[-1\] {
+  z-index: -1;
+}
+
+.mt-\[32px\] {
+  margin-top: 32px;
+}
+
+.mt-\[5px\] {
+  margin-top: 5px;
+}
+
+.mt-\[80px\] {
+  margin-top: 80px;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.h-\[35px\] {
+  height: 35px;
+}
+
+.h-\[650px\] {
+  height: 650px;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-\[220px\] {
+  width: 220px;
+}
+
+.w-\[35px\] {
+  width: 35px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-\[1180px\] {
+  max-width: 1180px;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -542,6 +634,26 @@ video {
   gap: 10px;
 }
 
+.gap-\[11px\] {
+  gap: 11px;
+}
+
+.gap-\[20px\] {
+  gap: 20px;
+}
+
+.gap-\[30px\] {
+  gap: 30px;
+}
+
+.gap-\[45px\] {
+  gap: 45px;
+}
+
+.border-\[3px\] {
+  border-width: 3px;
+}
+
 .border-l {
   border-left-width: 1px;
 }
@@ -555,13 +667,69 @@ video {
   border-color: rgb(45 45 45 / var(--tw-border-opacity));
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 242 234 / var(--tw-border-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 242 234 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .px-\[20px\] {
   padding-left: 20px;
   padding-right: 20px;
 }
 
+.px-\[30px\] {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.px-\[80px\] {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.py-\[160px\] {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.pb-\[30px\] {
+  padding-bottom: 30px;
+}
+
 .pt-\[39px\] {
   padding-top: 39px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
+}
+
+.text-\[40px\] {
+  font-size: 40px;
 }
 
 .text-base {
@@ -573,20 +741,40 @@ video {
   font-weight: 700;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .leading-\[19px\] {
   line-height: 19px;
 }
 
-.text-\[\#C32E44\] {
-  --tw-text-opacity: 1;
-  color: rgb(195 46 68 / var(--tw-text-opacity));
+.leading-\[46px\] {
+  line-height: 46px;
 }
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(243 242 234 / var(--tw-text-opacity));
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+/* npx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch */
 
 @font-face {
   font-family: "Halvar";
 
-  src: url("../fonts/HalvarBreit-Blk.woff") format("woff"),
-    url("../fonts/HalvarBreit-Blk.woff2") format("woff2");
+  src: url("../assets/fonts/HalvarBreit-Bd.woff") format("woff"),
+    url("../assets/fonts/HalvarBreit-Bd.woff2") format("woff2");
 
   font-weight: 700;
 }
@@ -646,4 +834,61 @@ body {
 
 a {
   font-family: 'Halvar', sans-serif;
+}
+
+.js-main-banner {
+  overflow: visible !important;
+}
+
+.swiper-button-next.css-btn__next {
+  background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.5' y='1.5' width='47' height='47' rx='23.5' stroke='%23F3F2EA' stroke-width='3'/%3E%3Cpath d='M22.5313 12.7413L31.7205 21.9306C32.1237 22.3336 32.4435 22.8121 32.6617 23.3388C32.8799 23.8655 32.9922 24.4299 32.9922 25C32.9922 25.5701 32.8799 26.1346 32.6617 26.6612C32.4435 27.1879 32.1237 27.6664 31.7205 28.0695L22.5313 37.2587L18.849 33.5747L27.4306 25L18.856 16.4254L22.5313 12.7413Z' fill='%23F3F2EA'/%3E%3C/svg%3E%0A")
+  no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.swiper-button-prev.css-btn__prev {
+  background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.5' y='1.5' width='47' height='47' rx='23.5' stroke='%23F3F2EA' stroke-width='3'/%3E%3Cpath d='M22.5313 12.7413L31.7205 21.9306C32.1237 22.3336 32.4435 22.8121 32.6617 23.3388C32.8799 23.8655 32.9922 24.4299 32.9922 25C32.9922 25.5701 32.8799 26.1346 32.6617 26.6612C32.4435 27.1879 32.1237 27.6664 31.7205 28.0695L22.5313 37.2587L18.849 33.5747L27.4306 25L18.856 16.4254L22.5313 12.7413Z' fill='%23F3F2EA'/%3E%3C/svg%3E%0A")
+  no-repeat;
+  transform: rotate(180deg);
+  width: 50px;
+  height: 50px;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.counter {
+  margin-top: 5px;
+}
+
+.counter span {
+  font-size: 30px;
+  line-height: 35px;
+  color: #F3F2EA;
+  font-weight: 700;
+}
+
+.counter span:last-child {
+  opacity: 0.3;
+}
+
+.hover\:border-main:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(195 46 68 / var(--tw-border-opacity));
+}
+
+.hover\:bg-main:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(195 46 68 / var(--tw-bg-opacity));
+}
+
+.hover\:text-main:hover {
+  --tw-text-opacity: 1;
+  color: rgb(195 46 68 / var(--tw-text-opacity));
 }
