@@ -36,3 +36,9 @@ let swiperNewsMainPage = new Swiper(".js-swiper-news", {
   },
 	
 });
+
+
+const myModal = new HystModal({
+	linkAttributeName: "data-hystmodal",
+	
+});

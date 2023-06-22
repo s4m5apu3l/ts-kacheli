@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* npx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch */
+/* npx tailwindcss -i ./assets/css/main.css -o ./dist/output.css --watch */
 
 @font-face {
   font-family: "Halvar";

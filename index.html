@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ТЦ Качели</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/hystmodal.min.css" />
   <link rel="stylesheet" href="./dist/output.css">
   <link rel="stylesheet" href="./assets/css/main.css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -29,6 +29,7 @@
             class="text-base leading-[19px] transition-all duration-200 text-white hover:text-main font-bold px-[20px] border-[#2D2D2D] border-l">СХЕМА
             МФК</a>
           <a href="#"
+            data-hystmodal="#contactsModal"
             class="text-base leading-[19px] transition-all duration-200 text-white hover:text-main font-bold px-[20px] border-[#2D2D2D] border-l border-r">КОНТАКТЫ</a>
         </nav>
 
@@ -39,6 +40,7 @@
           </div>
 
           <a href="#"
+            data-hystmodal="#arendatoramModal"
             class="border-[3px] border-white px-[30px] py-[20px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
             Арендаторам</a>
         </div>
@@ -491,7 +493,73 @@
     </div>
   </footer>
 
+  <div class="hystmodal" id="contactsModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">Закрыть</button>
+
+            dsaDSADSADSA
+        </div>
+    </div>
+  </div>
+
+  <div class="hystmodal" id="arendatoramModal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="max-w-[1180px] w-full max-h-[650px] h-full bg-[#151515] pt-[80px] pb-[55px] px-[120px] flex flex-col items-center justify-center" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">Закрыть</button>
+
+            <span class="text-[60px] font-bold text-white">
+              АРЕНДАТОРАМ
+            </span>
+
+            <div class="flex flex-col mt-[60px] w-full">
+              
+              <form>
+                <div class="flex items-center gap-[20px] ">
+                  <div class="flex flex-col gap-[10px] w-full">
+                    <span class="text-[20px] text-white ml-[20px] font-bold">
+                      Имя
+                    </span>
+                    <input type="text" required class="w-full px-[20px] py-[17px] placeholder:text-[#C7C7C7] text-black text-[14px] font-bold" placeholder="Введите имя">
+                  </div>
+
+                  <div class="flex flex-col gap-[10px] w-full">
+                    <span class="text-[20px] text-white ml-[20px] font-bold">
+                      Фамилия
+                    </span>
+                    <input type="text" required class="w-full px-[20px] py-[17px] placeholder:text-[#C7C7C7] text-black text-[14px] font-bold" placeholder="Введите фамилию">
+                  </div>
+
+                  <div class="flex flex-col gap-[10px] w-full">
+                    <span class="text-[20px] text-white ml-[20px] font-bold">
+                      Контактный телефон
+                    </span>
+                    <input type="tel" required class="w-full px-[20px] py-[17px] placeholder:text-[#C7C7C7] text-black text-[14px] font-bold" placeholder="Введите номер телефона">
+                  </div>
+                </div>
+
+                <div class="mt-[20px] ">
+                  <div class="flex flex-col gap-[10px] w-full">
+                    <span class="text-[20px] text-white ml-[20px] font-bold">
+                      Контактный телефон
+                    </span>
+                    <textarea  cols="30" rows="6" class="max-h-[150px] h-full px-[20px] py-[17px] w-full placeholder:text-[#C7C7C7] text-black text-[14px] font-bold" placeholder="Введите текст запроса Вашей заявки"></textarea>
+                  </div>
+                </div>
+
+                <div class="mt-[40px] w-full flex justify-between gap-[20px]">
+                  
+                </div>
+              </form>
+
+            </div>
+
+        </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./assets/js/hystmodal.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 
