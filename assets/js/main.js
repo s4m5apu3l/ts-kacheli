@@ -42,3 +42,20 @@ const myModal = new HystModal({
 	linkAttributeName: "data-hystmodal",
 	
 });
+
+
+// file uplaod
+const fileInput = document.getElementById("file-upload");
+const fileNameSpan = document.querySelector(".file-name");
+
+if (document.getElementById("file-upload")) {
+  fileInput.addEventListener("change", () => {
+    const file = fileInput.files[0];
+
+    if (file) {
+      fileNameSpan.textContent = file.name;
+    } else {
+      fileNameSpan.textContent = "Прикрепите файл";
+    }
+  });
+}
