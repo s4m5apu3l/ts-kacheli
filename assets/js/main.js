@@ -59,3 +59,35 @@ if (document.getElementById("file-upload")) {
     }
   });
 }
+
+// Burger
+const burgerMenu = document.querySelector(".l-burger__btn");
+const menuItems = document.querySelector(".l-header__body");
+const closeBtn = document.querySelector(".l-close__btn");
+
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("active");
+  menuItems.classList.toggle("active");
+  header.classList.toggle("active-header");
+});
+
+closeBtn.addEventListener("click", () => {
+  menuItems.classList.remove("active");
+});
+
+const header = document.querySelector(".l-header__content");
+
+document.addEventListener("click", (event) => {
+  const target = event.target;
+  const isClickInsideHeader = header.contains(target);
+
+  if (!isClickInsideHeader) {
+    // Код для закрытия шапки
+    burgerMenu.classList.remove("active");
+    menuItems.classList.remove("active");
+    searchInput.classList.remove("active");
+    header.classList.remove("active-header");
+    langIcon.classList.remove('active');
+    langBody.classList.remove("active");
+  }
+});
