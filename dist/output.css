@@ -542,8 +542,8 @@ video {
   left: 0px;
 }
 
-.left-\[80px\] {
-  left: 80px;
+.left-\[70px\] {
+  left: 70px;
 }
 
 .right-0 {
@@ -591,8 +591,8 @@ video {
   margin-left: 20px;
 }
 
-.mt-\[-378px\] {
-  margin-top: -378px;
+.mt-\[-335px\] {
+  margin-top: -335px;
 }
 
 .mt-\[20px\] {
@@ -697,6 +697,10 @@ video {
 
 .h-\[650px\] {
   height: 650px;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-fit {
@@ -1239,7 +1243,8 @@ a {
   font-family: 'Halvar', sans-serif;
 }
 
-.js-main-banner {
+.js-main-banner,
+.js-swiper-news {
   overflow: visible !important;
 }
 
@@ -1381,6 +1386,12 @@ a {
   }
 }
 
+@media (max-width: 1350px) {
+  .max-\[1350px\]\:hidden {
+    display: none;
+  }
+}
+
 @media (max-width: 1250px) {
   .max-\[1250px\]\:px-\[50px\] {
     padding-left: 50px;
@@ -1398,13 +1409,106 @@ a {
   }
 }
 
+@media (max-width: 850px) {
+  .max-\[850px\]\:hidden {
+    display: none;
+  }
+
+  .max-\[850px\]\:w-full {
+    width: 100%;
+  }
+
+  .max-\[850px\]\:justify-center {
+    justify-content: center;
+  }
+
+  .max-\[850px\]\:gap-\[20px\] {
+    gap: 20px;
+  }
+
+  .max-\[850px\]\:text-center {
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
+  .max-\[768px\]\:mt-\[20px\] {
+    margin-top: 20px;
+  }
+
+  .max-\[768px\]\:mt-\[40px\] {
+    margin-top: 40px;
+  }
+
+  .max-\[768px\]\:mt-\[48px\] {
+    margin-top: 48px;
+  }
+
+  .max-\[768px\]\:block {
+    display: block;
+  }
+
+  .max-\[768px\]\:flex {
+    display: flex;
+  }
+
+  .max-\[768px\]\:hidden {
+    display: none;
+  }
+
   .max-\[768px\]\:flex-col {
     flex-direction: column;
   }
 
+  .max-\[768px\]\:items-center {
+    align-items: center;
+  }
+
+  .max-\[768px\]\:justify-end {
+    justify-content: flex-end;
+  }
+
   .max-\[768px\]\:gap-0 {
     gap: 0px;
+  }
+
+  .max-\[768px\]\:gap-\[10px\] {
+    gap: 10px;
+  }
+
+  .max-\[768px\]\:border-0 {
+    border-width: 0px;
+  }
+
+  .max-\[768px\]\:bg-\[\#00000099\] {
+    background-color: #00000099;
+  }
+
+  .max-\[768px\]\:p-0 {
+    padding: 0px;
+  }
+
+  .max-\[768px\]\:px-\[40px\] {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .max-\[768px\]\:text-\[30px\] {
+    font-size: 30px;
+  }
+
+  .max-\[768px\]\:leading-\[18px\] {
+    line-height: 18px;
+  }
+
+  .max-\[768px\]\:leading-\[34px\] {
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 680px) {
+  .max-\[680px\]\:max-w-full {
+    max-width: 100%;
   }
 }
 

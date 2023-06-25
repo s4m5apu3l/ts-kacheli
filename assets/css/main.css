@@ -60,7 +60,8 @@ a {
   font-family: 'Halvar', sans-serif;
 }
 
-.js-main-banner {
+.js-main-banner,
+.js-swiper-news {
   overflow: visible !important;
 }
 
