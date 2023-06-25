@@ -59,6 +59,7 @@
       </div>
     </div>
 
+    <!-- header mobile -->
     <div class="l-header__body pb-[100px]">
       <div class="flex flex-col mt-[50px]">
 
@@ -250,7 +251,8 @@
       </div>
     </section>
 
-    <section class="pt-[160px]">
+    <!-- news section -->
+    <section class="max-[768px]:py-[100px] pt-[160px]">
         <div class="l-wrapper flex justify-between items-center ">
 
           <div class="max-[850px]:text-center max-[850px]:w-full max-[850px]:justify-center max-[850px]:gap-[20px] flex gap-[45px] items-center">
@@ -272,6 +274,7 @@
         <div class="max-[768px]:mt-[40px] mt-[80px] max-[560px]:px-[22px] max-[1250px]:px-[50px] max-[1400px]:px-[100px] px-[178px] overflow-x-hidden">
           <div class="swiper  max-w-[1180px] js-swiper-news">
             <div class="swiper-wrapper">
+
               <div class="swiper-slide">
                 <a href="#"
                   class="max-[680px]:max-w-full group transition-all duration-200 max-w-[400px] h-[500px] flex items-end w-full relative">
@@ -285,34 +288,7 @@
                       Новости
                     </div>
                     <div class="px-[30px] mt-[20px]">
-                      <span class="text-white text-[20px] font-bold leading-[23px]">
-                        СКОРО ОТКРЫТИЕ НОВОГО МАГАЗИНА TOM FORD
-                      </span>
-                    </div>
-                    <div class="mt-[26px] pl-[30px] flex items-center gap-[10px]">
-                      <img class="w-[20px] h-[20px]" src="./assets/img/time.svg" alt="">
-                      <span class="text-white text-[14px] font-bold">
-                        12.07.2023
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              
-              <div class="swiper-slide">
-                <a href="#"
-                  class="max-[680px]:max-w-full group transition-all duration-200 max-w-[400px] h-[500px] flex items-end w-full relative">
-                  <img class="absolute z-0 w-full h-full left-0 right-0 top-0 bottom-0" src="./assets/img/news1.png"
-                    alt="">
-
-                  <div
-                    class="group-hover:bg-[#C32E4499] transition-all duration-200 bg-[#00000099] z-20 w-full h-[250px] pb-[22px] pt-[67px]">
-                    <div
-                      class="max-w-[130px] flex items-center bg-[#F3F2EA] py-[6px] pl-[30px] pr-[22px] text-black text-base font-bold">
-                      Новости
-                    </div>
-                    <div class="px-[30px] mt-[20px]">
-                      <span class="text-white text-[20px] font-bold leading-[23px]">
+                      <span class="text-dots text-white text-[20px] font-bold leading-[23px]">
                         СКОРО ОТКРЫТИЕ НОВОГО МАГАЗИНА TOM FORD
                       </span>
                     </div>
@@ -338,7 +314,7 @@
                       Новости
                     </div>
                     <div class="px-[30px] mt-[20px]">
-                      <span class="text-white text-[20px] font-bold leading-[23px]">
+                      <span class="text-dots text-white text-[20px] font-bold leading-[23px]">
                         СКОРО ОТКРЫТИЕ НОВОГО МАГАЗИНА TOM FORD
                       </span>
                     </div>
@@ -364,7 +340,7 @@
                       Новости
                     </div>
                     <div class="px-[30px] mt-[20px]">
-                      <span class="text-white text-[20px] font-bold leading-[23px]">
+                      <span class="text-dots text-white text-[20px] font-bold leading-[23px]">
                         СКОРО ОТКРЫТИЕ НОВОГО МАГАЗИНА TOM FORD
                       </span>
                     </div>
@@ -390,7 +366,7 @@
                       Новости
                     </div>
                     <div class="px-[30px] mt-[20px]">
-                      <span class="text-white text-[20px] font-bold leading-[23px]">
+                      <span class="text-dots text-white text-[20px] font-bold leading-[23px]">
                         СКОРО ОТКРЫТИЕ НОВОГО МАГАЗИНА TOM FORD
                       </span>
                     </div>
@@ -403,12 +379,10 @@
                   </div>
                 </a>
               </div>
-
-
             </div>
           </div>
 
-          <div class="max-w-[210px] mx-auto mt-[60px] relative z-20">
+          <div class=" max-[768px]:mt-[40px] max-w-[210px] mx-auto mt-[60px] relative z-20">
             <a href="#"
               class="block border-[3px] border-white px-[30px] py-[19px] leading-[16px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
               Все Новости
@@ -417,23 +391,29 @@
         </div>
     </section>
 
-    <section class="bg-[#1C1C1C] mt-[-335px] h-[530px]"></section>
+    <section class="max-[768px]:hidden bg-[#1C1C1C] mt-[-370px] h-[530px]"></section>
 
-    <section class="pt-[205px] pb-[180px] bg-kacheli-photo relative">
+    <section class="max-[768px]:py-[100px] pt-[205px] pb-[180px] bg-kacheli-photo relative">
       <div class="absolute w-full h-full left-0 right-0 bg-[#111111F2] top-0 bottom-0"></div>
       <div class="l-wrapper">
-        <div class="relative z-100 flex gap-[20px] justify-between">
+        <div class="max-[800px]:flex-col  relative z-100 flex gap-[20px] justify-between">
 
-          <div class="max-w-[600px]">
-            <div class="flex gap-[45px] items-center">
-              <div class="w-[35px] h-[35px] bg-white"></div>
+          <div class="w-full max-w-[600px]">
+            <div class="max-[800px]:w-full max-[800px]:justify-center max-[800px]:text-center flex gap-[45px] items-center">
+              <div class="max-[850px]:hidden w-[35px] h-[35px] bg-white"></div>
               <h2 class="text-[40px] font-bold text-white">
                 О НАС
               </h2>
             </div>
 
-            <div class="mt-[60px]">
-              <span class="text-white text-[20px] leading-[150%] font-bold">
+            <div class="mt-[40px] hidden max-[800px]:block ">
+              <div class="mx-auto w-full max-w-[480px] h-[422px] img-border relative">
+                <img class="w-full h-full" src="./assets/img/kacheli-photo.png" alt="kacheli photo">
+              </div>
+            </div>
+
+            <div class="w-full mt-[60px]">
+              <span class="max-[768px]:text-base max-[768px]:leading-[24px] max-[800px]:text-center w-full block text-white text-[20px] leading-[150%] font-bold">
                 Многофункциональный комплекс «Качели» - первое семейное пространство города Якутска, в котором собраны,
                 пожалуй, лучшие магазины и услуги как для детей, так и для взрослых. Более 60-ти предприятий находятся в
                 стенах нашего уютного здания в самом сердце прогрессивного 203 микрорайона!
@@ -441,7 +421,7 @@
             </div>
           </div>
 
-          <div class="w-[480px] h-[422px] img-border relative">
+          <div class="max-[800px]:hidden w-[480px] h-[422px] img-border relative">
             <img class="w-full h-full" src="./assets/img/kacheli-photo.png" alt="kacheli photo">
           </div>
 
@@ -449,17 +429,17 @@
       </div>
     </section>
 
-    <section class="bg-[#1C1C1C] pt-[160px] pb-[200px]">
+    <section class="max-[768px]:pt-[100px] bg-[#1C1C1C] pt-[160px] pb-[200px]">
       <div class="l-wrapper">
         <div class="w-full flex items-center justify-between">
-          <div class="flex gap-[45px] items-center">
-            <div class="w-[35px] h-[35px] bg-white"></div>
+          <div class="max-[800px]:w-full max-[800px]:justify-center max-[800px]:text-center flex gap-[45px] items-center">
+            <div class="max-[850px]:hidden w-[35px] h-[35px] bg-white"></div>
             <h2 class="text-[40px] font-bold text-white">
               СХЕМА МФК
             </h2>
           </div>
 
-          <div class="w-full bg-[#2D2D2D] h-[2px] max-w-[700px]"></div>
+          <div class="max-[1350px]:hidden w-full bg-[#2D2D2D] h-[2px] max-w-[700px]"></div>
         </div>
 
         <div class="mt-[50px]">
@@ -472,14 +452,14 @@
   <footer class="pt-[100px] pb-[135px]">
     <div class="l-wrapper">
 
-      <div class="flex items-center justify-between gap-[10px]">
+      <div class="max-[1170px]:items-center max-[1170px]:flex-col flex  justify-between gap-[10px]">
 
-        <div class="flex flex-col max-w-[200px] w-full">
-          <a href="/" class="flex items-center justify-center">
+        <div class=" max-[1170px]:order-2 flex flex-col max-w-[200px] w-full">
+          <a href="/" class="max-[1170px]:hidden flex items-center justify-center">
             <img class="w-full" src="./assets/img/logo.svg" alt="Логотип Качели">
           </a>
 
-          <ul class="mt-[93px] flex items-center gap-[25px]">
+          <ul class="max-[1170px]:mt-[70px] mt-[93px] flex items-center gap-[25px]">
             <li>
               <a href="#" class="">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -536,47 +516,51 @@
             </li>
           </ul>
 
-          <div class="mt-[60px]">
+          <div class="max-[1170px]:mt-[50px] mt-auto">
             <a href="#"
-              class="border-[3px] border-white px-[30px] py-[19px] leading-[16px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
+              class="block border-[3px] border-white px-[30px] py-[19px] leading-[16px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
               Арендаторам
             </a>
           </div>
         </div>
 
-        <nav>
-          <ul class="flex flex-col items-start">
-            <li class="">
+        <nav class="max-[1170px]:order-1">
+          <a href="/" class="max-[1170px]:flex hidden items-center justify-center">
+            <img class="w-full" src="./assets/img/logo.svg" alt="Логотип Качели">
+          </a>
+
+          <ul class="max-[1170px]:text-center max-[1170px]:mt-[80px] flex flex-col items-start">
+            <li class="max-[1170px]:w-full ">
               <a href="#"
                 class="text-base leading-[19px] transition-all duration-200 text-white hover:text-main font-bold">
                 О НАС
               </a>
             </li>
 
-            <li class="mt-[60px]">
+            <li class="max-[1170px]:w-full mt-[60px]">
               <a href="#"
                 class="text-base leading-[19px] transition-all duration-200 text-white hover:text-main font-bold">
                 СХЕМА МФК
               </a>
             </li>
 
-            <li class="mt-[60px]">
+            <li class="max-[1170px]:w-full mt-[60px]">
               <a href="#"
                 class="text-base leading-[19px] transition-all duration-200 text-white hover:text-main font-bold">
                 КОНТАКТЫ
               </a>
             </li>
 
-            <li class="mt-[60px]">
-              <div class="flex items-center gap-[11px]">
+            <li class="max-[1170px]:w-full mt-[60px]">
+              <div class="max-[1170px]:justify-center flex items-center gap-[11px]">
                 <img src="./assets/img/time.svg" alt="">
                 <span class="text-white text-base font-bold">09:00 – 22:00</span>
               </div>
             </li>
 
 
-            <li class="mt-[60px]">
-              <div class="flex items-center gap-[11px]">
+            <li class="max-[1170px]:w-full mt-[60px]">
+              <div class="max-[1170px]:justify-center flex items-center gap-[11px]">
                 <img src="./assets/img/wa-mini.svg" alt="">
                 <span class="text-white text-base font-bold">+7(924)664-44-64</span>
               </div>
@@ -585,7 +569,7 @@
           </ul>
         </nav>
 
-        <div class="max-w-[580px] w-full ">
+        <div class="max-[1170px]:mt-[50px] max-[1170px]:order-3 max-w-[580px] w-full ">
           <div class="w-full flex justify-between items-center gap-[29px]">
             <div class="h-[2px] w-full bg-[#F3F2EA]"></div>
             <span class="text-base font-bold block text-white whitespace-nowrap">СХЕМА ПРОЕЗДА</span>
