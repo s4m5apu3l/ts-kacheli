@@ -145,6 +145,11 @@ a {
   transform: translateY(0);
 }
 
+.active-news-link {
+  background-color:#C32E44;
+}
+
+
 .text-dots {
   display: -webkit-box;
   -webkit-line-clamp: 2;
