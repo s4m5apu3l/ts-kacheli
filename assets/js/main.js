@@ -64,6 +64,7 @@ if (document.getElementById("file-upload")) {
 const burgerMenu = document.querySelector(".l-burger__btn");
 const menuItems = document.querySelector(".l-header__body");
 const closeBtn = document.querySelector(".l-close__btn");
+const header = document.querySelector(".l-header");
 
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
@@ -75,7 +76,6 @@ closeBtn.addEventListener("click", () => {
   menuItems.classList.remove("active");
 });
 
-const header = document.querySelector(".l-header__content");
 
 document.addEventListener("click", (event) => {
   const target = event.target;
@@ -85,9 +85,6 @@ document.addEventListener("click", (event) => {
     // Код для закрытия шапки
     burgerMenu.classList.remove("active");
     menuItems.classList.remove("active");
-    searchInput.classList.remove("active");
     header.classList.remove("active-header");
-    langIcon.classList.remove('active');
-    langBody.classList.remove("active");
   }
 });
