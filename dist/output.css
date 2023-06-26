@@ -1725,6 +1725,14 @@ a {
     padding-left: 22px;
     padding-right: 22px;
   }
+
+  .max-\[560px\]\:pb-\[30px\] {
+    padding-bottom: 30px;
+  }
+
+  .max-\[560px\]\:pt-\[80px\] {
+    padding-top: 80px;
+  }
 }
 
 @media (max-width: 540px) {
