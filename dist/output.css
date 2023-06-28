@@ -1837,6 +1837,10 @@ a {
   .max-\[560px\]\:pt-\[80px\] {
     padding-top: 80px;
   }
+
+  .max-\[560px\]\:pt-\[20px\] {
+    padding-top: 20px;
+  }
 }
 
 @media (max-width: 540px) {
