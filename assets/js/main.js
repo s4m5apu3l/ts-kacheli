@@ -107,3 +107,11 @@ document.addEventListener("click", (event) => {
     header.classList.remove("active-header");
   }
 });
+
+let swiperNewsDetailPage = new Swiper(".js-swiper-news__detail-page", {
+  spaceBetween: 24,
+  navigation: {
+    nextEl: ".js-news-detail__next",
+    prevEl: ".js-news-detail__prev",
+  },
+});
