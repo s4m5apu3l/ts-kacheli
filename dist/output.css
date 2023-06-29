@@ -599,8 +599,8 @@ video {
   margin-left: 20px;
 }
 
-.mt-\[-120px\] {
-  margin-top: -120px;
+.mt-\[-11\%\] {
+  margin-top: -11%;
 }
 
 .mt-\[-370px\] {
@@ -657,14 +657,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-\[-10\%\] {
-  margin-top: -10%;
-}
-
-.mt-\[-11\%\] {
-  margin-top: -11%;
 }
 
 .block {
@@ -922,6 +914,10 @@ video {
   gap: 5px;
 }
 
+.gap-\[1px\] {
+  gap: 1px;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -1112,6 +1108,11 @@ video {
   padding-bottom: 6px;
 }
 
+.py-\[15px\] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .pb-\[100px\] {
   padding-bottom: 100px;
 }
@@ -1276,6 +1277,20 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(243 242 234 / var(--tw-text-opacity));
+}
+
+.brightness-90 {
+  --tw-brightness: brightness(.9);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.brightness-75 {
+  --tw-brightness: brightness(.75);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all {
@@ -1675,10 +1690,6 @@ a {
     margin-top: 48px;
   }
 
-  .max-\[768px\]\:mt-\[-88px\] {
-    margin-top: -88px;
-  }
-
   .max-\[768px\]\:block {
     display: block;
   }
@@ -1820,26 +1831,26 @@ a {
     padding: 20px;
   }
 
-  .max-\[560px\]\:px-\[22px\] {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
   .max-\[560px\]\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .max-\[560px\]\:px-\[22px\] {
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
   .max-\[560px\]\:pb-\[30px\] {
     padding-bottom: 30px;
   }
 
-  .max-\[560px\]\:pt-\[80px\] {
-    padding-top: 80px;
-  }
-
   .max-\[560px\]\:pt-\[20px\] {
     padding-top: 20px;
+  }
+
+  .max-\[560px\]\:pt-\[80px\] {
+    padding-top: 80px;
   }
 }
 

@@ -47,11 +47,11 @@ let swiperNewsMainPage = new Swiper(".js-swiper-news", {
     },
     '680':{
       slidesPerView: 2,
-      spaceBetween: 0,
+      spaceBetween: 1,
     },
     '950':{
       slidesPerView: 3,
-      spaceBetween: 0,
+      spaceBetween: 1,
     },
   }
 });
