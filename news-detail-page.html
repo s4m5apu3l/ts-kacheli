@@ -414,10 +414,8 @@
 
   <div class="hystmodal" id="contactsModal" aria-hidden="true">
     <div class="hystmodal__wrap">
-      <div
-        class="relative max-w-[1180px] text-center w-full max-h-[650px] h-full bg-[#151515] pt-[80px] pb-[55px] px-[120px] "
-        role="dialog" aria-modal="true">
-        <button data-hystclose class="absolute right-[40px] top-[40px]">
+      <div class="max-[360px]:px-[20px] max-[768px]:px-[40px] max-[1100px]:h-auto max-[1100px]:max-h-max relative max-w-[1180px] text-center w-full max-h-[650px] h-full bg-[#151515] pt-[80px] pb-[55px] px-[120px] " role="dialog" aria-modal="true">
+        <button data-hystclose class="max-[360px]:right-[20px] absolute right-[40px] top-[40px]">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="40" height="40" rx="1" fill="#303030" />
             <path
@@ -427,12 +425,12 @@
 
         </button>
 
-        <span class="text-[60px] font-bold text-white leading-[69px] ">
+        <span class="max-[768px]:text-[30px] text-[60px] font-bold text-white leading-[69px] ">
           КОНТАКТЫ
         </span>
 
-        <div class="flex flex-col mt-[60px] w-full">
-          <ul class="flex items-center justify-between gap-[10px]">
+        <div class="max-[560px]:order-1 flex flex-col mt-[60px] w-full">
+          <ul class="max-[560px]:items-center max-[1000px]:flex-col max-[1000px]:items-start max-[1000px]:gap-[20px] flex items-center justify-between gap-[10px]">
             <li>
               <div class="flex items-center gap-[11px]">
                 <img src="./assets/img/wa-mini.svg" alt="">
@@ -453,20 +451,20 @@
             </li>
           </ul>
 
-          <div class="mt-[55px]">
+          <div class="max-[560px]:order-3 mt-[55px]">
             <div class="w-full flex justify-between items-center gap-[29px]">
               <div class="h-[2px] w-full bg-[#F3F2EA]"></div>
               <span class="text-base font-bold block text-white whitespace-nowrap">СХЕМА ПРОЕЗДА</span>
               <div class="h-[2px] w-full bg-[#F3F2EA]"></div>
             </div>
 
-            <div class="mt-[22px] h-[130px] w-full bg-[#F3F2EA]">
+            <div class="max-[560px]:h-[310px] mt-[22px] h-[130px] w-full bg-[#F3F2EA]">
 
             </div>
           </div>
 
-          <div class="mt-[40px] w-full flex justify-between gap-[20px]">
-            <ul class="flex items-center gap-[25px]">
+          <div class="max-[560px]:items-center max-[560px]:gap-[60px] max-[560px]:flex-col max-[560px]:order-2 mt-[40px] w-full flex justify-between gap-[20px]">
+            <ul class="whitespace-nowrap flex items-center gap-[25px]">
               <li>
                 <a href="#" class="">
                   <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -482,7 +480,7 @@
                       </clipPath>
                     </defs>
                   </svg>
-
+  
                 </a>
               </li>
               <li>
@@ -500,10 +498,10 @@
                       </clipPath>
                     </defs>
                   </svg>
-
+  
                 </a>
               </li>
-
+  
               <li>
                 <a href="#">
                   <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -523,9 +521,8 @@
               </li>
             </ul>
 
-            <button type="submit"
-              class="h-fit border-[3px] border-white px-[30px] py-[19px] leading-[16px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
-              Отправить
+            <button data-hystmodal="#arendatoramModal" type="submit" class="max-w-[200px] h-fit border-[3px] border-white px-[30px] py-[19px] leading-[16px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
+              Арендаторам
             </button>
 
           </div>
@@ -538,9 +535,8 @@
 
   <div class="hystmodal" id="arendatoramModal" aria-hidden="true">
     <div class="hystmodal__wrap">
-      <div class="relative max-w-[1180px] w-full max-h-[650px] h-full bg-[#151515]  pt-[80px] pb-[55px] px-[120px]"
-        role="dialog" aria-modal="true">
-        <button data-hystclose class="absolute right-[40px] top-[40px]">
+      <div class="max-[360px]:px-[20px] max-[768px]:px-[40px] max-[1100px]:h-auto max-[1100px]:max-h-max relative max-w-[1180px] w-full max-h-[650px] h-full bg-[#151515]  pt-[80px] pb-[55px] px-[120px]" role="dialog" aria-modal="true">
+        <button data-hystclose class="max-[360px]:right-[20px] absolute right-[40px] top-[40px]">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="40" height="40" rx="1" fill="#303030" />
             <path
@@ -550,14 +546,14 @@
 
         </button>
 
-        <span class="text-[60px] font-bold text-white leading-[69px] mx-auto block w-fit">
+        <span class="max-[768px]:text-[30px] text-[60px] font-bold text-white leading-[69px] mx-auto block w-fit">
           АРЕНДАТОРАМ
         </span>
 
         <div class="flex flex-col mt-[60px] w-full">
 
           <form>
-            <div class="flex items-center gap-[20px] ">
+            <div class="max-[1100px]:flex-col flex items-center gap-[20px] ">
               <div class="flex flex-col gap-[10px] w-full">
                 <span class="text-[20px] text-white ml-[20px] font-bold">
                   Имя
@@ -597,13 +593,13 @@
               </div>
             </div>
 
-            <div class="mt-[40px] w-full flex justify-between gap-[20px]">
+            <div class="max-[950px]:flex-col mt-[40px] w-full flex justify-between gap-[20px]">
 
-              <div class="flex items-center gap-[30px]">
+              <div class="max-[800px]:items-start max-[800px]:flex-col flex items-center gap-[30px]">
                 <div class="flex">
                   <input hidden id="file-upload" placeholder="Прикрепите файл" type="file">
                   <label class="border-dashed border-[3px] border-[#303030] cursor-pointer" for="file-upload">
-                    <div class="max-w-[306px] w-full flex items-center gap-[10px] py-[14px] px-[40px]">
+                    <div class="max-[560px]:px-[20px] max-w-[306px] w-full flex items-center gap-[10px] py-[14px] px-[40px]">
                       <div class="min-w-[30px] ">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -624,8 +620,7 @@
                 </span>
               </div>
 
-              <button type="submit"
-                class="h-fit border-[3px] border-white px-[30px] py-[19px] leading-[16px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
+              <button type="submit" class="h-fit border-[3px] border-white px-[30px] py-[19px] leading-[16px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
                 Отправить
               </button>
 
