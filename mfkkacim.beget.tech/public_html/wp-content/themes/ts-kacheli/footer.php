@@ -117,7 +117,7 @@
 
         <div class="relative mt-[39px] w-full h-[310px]">
           <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae1fce5cddd4c75151fa1d51a821330860818f123c1bf964ceb6a99d7820e9987&amp;width=100%25&amp;height=310&amp;lang=ru_RU&amp;scroll=true"></script> -->
-          <iframe class='test' src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae1fce5cddd4c75151fa1d51a821330860818f123c1bf964ceb6a99d7820e9987&amp;source=constructor" width="580" height="310" frameborder="0"></iframe>
+          <iframe class='test' src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae1fce5cddd4c75151fa1d51a821330860818f123c1bf964ceb6a99d7820e9987&amp;source=constructor" width="100%" height="310" frameborder="0"></iframe>
           <div class="difference absolute bg-white right-0 left-0 top-0 bottom-0 w-full h-full bg-red  z-10"></div>
         </div>
 

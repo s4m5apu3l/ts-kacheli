@@ -1,0 +1,626 @@
+# Copyright (C) 2021 Mapplic 7.1
+# This file is distributed under the same license as the Mapplic 7.1 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mapplic 7.1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin/admin.php:59
+msgid "Add"
+msgstr ""
+
+#: admin/admin.php:60, admin/metaboxes.php:64, admin/metaboxes.php:268, admin/metaboxes.php:337, admin/metaboxes.php:438
+msgid "Save"
+msgstr ""
+
+#: admin/admin.php:61, mapplic.php:86
+msgid "Поиск"
+msgstr ""
+
+#: admin/admin.php:62, mapplic.php:87
+msgid "Nothing found. Please try a different search."
+msgstr ""
+
+#: admin/admin.php:63, admin/metaboxes.php:206, admin/metaboxes.php:244, mapplic.php:45
+msgid "Map"
+msgstr ""
+
+#: admin/admin.php:64, admin/admin.php:113
+msgid "Raw"
+msgstr ""
+
+#: admin/admin.php:65
+msgid "Landmark ID is required and must be unique!"
+msgstr ""
+
+#: admin/admin.php:95
+msgid "Shortcode"
+msgstr ""
+
+#: admin/admin.php:107
+msgid "Indent"
+msgstr ""
+
+#: admin/admin.php:122
+msgid "Location"
+msgstr ""
+
+#: admin/admin.php:123
+msgid "Floors"
+msgstr ""
+
+#: admin/admin.php:124
+msgid "Styles"
+msgstr ""
+
+#: admin/admin.php:125, admin/metaboxes.php:132
+msgid "Groups"
+msgstr ""
+
+#: admin/admin.php:126
+msgid "Geoposition"
+msgstr ""
+
+#: admin/admin.php:127
+msgid "Settings"
+msgstr ""
+
+#: admin/maps.php:60
+msgid "World"
+msgstr ""
+
+#: admin/maps.php:61
+msgid "Continents"
+msgstr ""
+
+#: admin/maps.php:62
+msgid "Europe"
+msgstr ""
+
+#: admin/maps.php:63
+msgid "USA"
+msgstr ""
+
+#: admin/maps.php:64
+msgid "World + US"
+msgstr ""
+
+#: admin/maps.php:65
+msgid "Canada"
+msgstr ""
+
+#: admin/maps.php:66
+msgid "Australia"
+msgstr ""
+
+#: admin/maps.php:67
+msgid "France"
+msgstr ""
+
+#: admin/maps.php:68
+msgid "Germany"
+msgstr ""
+
+#: admin/maps.php:69
+msgid "United Kingdom"
+msgstr ""
+
+#: admin/maps.php:70
+msgid "Italy"
+msgstr ""
+
+#: admin/maps.php:71
+msgid "Netherlands"
+msgstr ""
+
+#: admin/maps.php:72
+msgid "Switzerland"
+msgstr ""
+
+#: admin/maps.php:73
+msgid "Russia"
+msgstr ""
+
+#: admin/maps.php:74
+msgid "China"
+msgstr ""
+
+#: admin/maps.php:75
+msgid "Brazil"
+msgstr ""
+
+#: admin/maps.php:78
+msgid "Select Map Type"
+msgstr ""
+
+#: admin/maps.php:79
+msgid "Create a custom map using your own file(s) or select one of the built-in maps."
+msgstr ""
+
+#: admin/maps.php:81
+msgid "Custom"
+msgstr ""
+
+#: admin/maps.php:89
+msgid "Define Map File"
+msgstr ""
+
+#: admin/maps.php:90
+msgid "Upload or select map file from library. SVG, JPG and PNG formats supported."
+msgstr ""
+
+#: admin/maps.php:92, admin/metaboxes.php:201, admin/metaboxes.php:235, admin/metaboxes.php:358, admin/metaboxes.php:401
+msgid "Name"
+msgstr ""
+
+#: admin/maps.php:96
+msgid "ID (required)"
+msgstr ""
+
+#: admin/maps.php:101
+msgid "Map File (required)"
+msgstr ""
+
+#: admin/maps.php:108
+msgid "Width (reqiured)"
+msgstr ""
+
+#: admin/maps.php:112
+msgid "Height (reqiured)"
+msgstr ""
+
+#: admin/metaboxes.php:27
+msgid "Tooltip"
+msgstr ""
+
+#: admin/metaboxes.php:28
+msgid "Open link"
+msgstr ""
+
+#: admin/metaboxes.php:29
+msgid "Open link in new tab"
+msgstr ""
+
+#: admin/metaboxes.php:30
+msgid "Lightbox"
+msgstr ""
+
+#: admin/metaboxes.php:31
+msgid "External"
+msgstr ""
+
+#: admin/metaboxes.php:32, admin/metaboxes.php:142
+msgid "Image"
+msgstr ""
+
+#: admin/metaboxes.php:33
+msgid "Reveal"
+msgstr ""
+
+#: admin/metaboxes.php:34
+msgid "None"
+msgstr ""
+
+#: admin/metaboxes.php:35
+msgid "Disabled"
+msgstr ""
+
+#: admin/metaboxes.php:36
+msgid "Select"
+msgstr ""
+
+#: admin/metaboxes.php:63
+msgid "Delete"
+msgstr ""
+
+#: admin/metaboxes.php:69
+msgid "Title"
+msgstr ""
+
+#: admin/metaboxes.php:70, admin/metaboxes.php:203, admin/metaboxes.php:236, admin/metaboxes.php:359, admin/metaboxes.php:402
+msgid "ID (unique)"
+msgstr ""
+
+#: admin/metaboxes.php:71
+msgid "WordPress post ID (optional)"
+msgstr ""
+
+#: admin/metaboxes.php:77
+msgid "Geolocation"
+msgstr ""
+
+#: admin/metaboxes.php:82
+msgid "Marker"
+msgstr ""
+
+#: admin/metaboxes.php:114
+msgid "Label, icon or image URL"
+msgstr ""
+
+#: admin/metaboxes.php:115, admin/metaboxes.php:291, admin/metaboxes.php:318
+msgid "Base Color"
+msgstr ""
+
+#: admin/metaboxes.php:117
+msgid "Attributes"
+msgstr ""
+
+#: admin/metaboxes.php:118
+msgid "Link"
+msgstr ""
+
+#: admin/metaboxes.php:121, admin/metaboxes.php:369, admin/metaboxes.php:412
+msgid "Style"
+msgstr ""
+
+#: admin/metaboxes.php:123, admin/metaboxes.php:526
+msgid "No style"
+msgstr ""
+
+#: admin/metaboxes.php:149
+msgid "Thumbnail"
+msgstr ""
+
+#: admin/metaboxes.php:155
+msgid "Action"
+msgstr ""
+
+#: admin/metaboxes.php:157
+msgid "Default"
+msgstr ""
+
+#: admin/metaboxes.php:166
+msgid "Zoom Level"
+msgstr ""
+
+#: admin/metaboxes.php:168
+msgid "Reveal Zoom"
+msgstr ""
+
+#: admin/metaboxes.php:170, admin/metaboxes.php:380, admin/metaboxes.php:423
+msgid "Hide from directory"
+msgstr ""
+
+#: admin/metaboxes.php:172, admin/metaboxes.php:360, admin/metaboxes.php:403
+msgid "About"
+msgstr ""
+
+#: admin/metaboxes.php:174
+msgid "Duplicate"
+msgstr ""
+
+#: admin/metaboxes.php:177
+msgid "Add New"
+msgstr ""
+
+#: admin/metaboxes.php:196, admin/metaboxes.php:201, admin/metaboxes.php:267
+msgid "New Floor"
+msgstr ""
+
+#: admin/metaboxes.php:213
+msgid "Minimap"
+msgstr ""
+
+#: admin/metaboxes.php:240
+msgid "Show by default"
+msgstr ""
+
+#: admin/metaboxes.php:284, admin/metaboxes.php:336
+msgid "New Style"
+msgstr ""
+
+#: admin/metaboxes.php:289
+msgid "Class"
+msgstr ""
+
+#: admin/metaboxes.php:293, admin/metaboxes.php:320
+msgid "Hover Color"
+msgstr ""
+
+#: admin/metaboxes.php:295, admin/metaboxes.php:322
+msgid "Active Color"
+msgstr ""
+
+#: admin/metaboxes.php:316
+msgid "Class Name"
+msgstr ""
+
+#: admin/metaboxes.php:353, admin/metaboxes.php:358, admin/metaboxes.php:437
+msgid "New Group"
+msgstr ""
+
+#: admin/metaboxes.php:360, admin/metaboxes.php:403
+msgid "Text visible in directory"
+msgstr ""
+
+#: admin/metaboxes.php:362, admin/metaboxes.php:405
+msgid "Icon"
+msgstr ""
+
+#: admin/metaboxes.php:379, admin/metaboxes.php:422
+msgid "Add to legend"
+msgstr ""
+
+#: admin/metaboxes.php:381, admin/metaboxes.php:424
+msgid "Enable toggle mode"
+msgstr ""
+
+#: admin/metaboxes.php:382, admin/metaboxes.php:425
+msgid "Switch off by default"
+msgstr ""
+
+#: admin/metaboxes.php:472
+msgid "Map file dimensions either not set or invalid!"
+msgstr ""
+
+#: admin/metaboxes.php:478
+msgid "Number of interactive SVG map elements:"
+msgstr ""
+
+#: admin/metaboxes.php:479
+msgid "Map container"
+msgstr ""
+
+#: admin/metaboxes.php:483
+msgid "Height"
+msgstr ""
+
+#: admin/metaboxes.php:487
+msgid "Min Height"
+msgstr ""
+
+#: admin/metaboxes.php:491
+msgid "Max Height"
+msgstr ""
+
+#: admin/metaboxes.php:498
+msgid "Map file dimensions (REQUIRED)"
+msgstr ""
+
+#: admin/metaboxes.php:500
+msgid "File Width"
+msgstr ""
+
+#: admin/metaboxes.php:501, admin/metaboxes.php:505
+msgid "REQUIRED"
+msgstr ""
+
+#: admin/metaboxes.php:504
+msgid "File Height"
+msgstr ""
+
+#: admin/metaboxes.php:509
+msgid "General"
+msgstr ""
+
+#: admin/metaboxes.php:511
+msgid "Portrait breakpoint"
+msgstr ""
+
+#: admin/metaboxes.php:512
+msgid "860 (Default)"
+msgstr ""
+
+#: admin/metaboxes.php:515
+msgid "Default action"
+msgstr ""
+
+#: admin/metaboxes.php:524
+msgid "Default style"
+msgstr ""
+
+#: admin/metaboxes.php:534
+msgid "Default fill color"
+msgstr ""
+
+#: admin/metaboxes.php:537
+msgid "More button text"
+msgstr ""
+
+#: admin/metaboxes.php:538, mapplic.php:85
+msgid "More"
+msgstr ""
+
+#: admin/metaboxes.php:541
+msgid "Enable fullscreen"
+msgstr ""
+
+#: admin/metaboxes.php:544
+msgid "Hover tooltip"
+msgstr ""
+
+#: admin/metaboxes.php:547
+msgid "Description in hover tooltip"
+msgstr ""
+
+#: admin/metaboxes.php:550
+msgid "Smart tooltip"
+msgstr ""
+
+#: admin/metaboxes.php:553
+msgid "Deeplinking"
+msgstr ""
+
+#: admin/metaboxes.php:556
+msgid "Open links in new tab"
+msgstr ""
+
+#: admin/metaboxes.php:559
+msgid "Enable minimap"
+msgstr ""
+
+#: admin/metaboxes.php:562
+msgid "Animations"
+msgstr ""
+
+#: admin/metaboxes.php:566
+msgid "Zoom options"
+msgstr ""
+
+#: admin/metaboxes.php:568
+msgid "Enable zoom"
+msgstr ""
+
+#: admin/metaboxes.php:572
+msgid "Maximum zoom level"
+msgstr ""
+
+#: admin/metaboxes.php:573
+msgid "No zoom"
+msgstr ""
+
+#: admin/metaboxes.php:576
+msgid "Zoom margin"
+msgstr ""
+
+#: admin/metaboxes.php:577
+msgid "200 (Default)"
+msgstr ""
+
+#: admin/metaboxes.php:580
+msgid "Zoom buttons"
+msgstr ""
+
+#: admin/metaboxes.php:583
+msgid "Clear button"
+msgstr ""
+
+#: admin/metaboxes.php:586
+msgid "Zoom out when closing popup"
+msgstr ""
+
+#: admin/metaboxes.php:589
+msgid "Close popup when zoomed out"
+msgstr ""
+
+#: admin/metaboxes.php:592
+msgid "Mouse wheel"
+msgstr ""
+
+#: admin/metaboxes.php:595
+msgid "Always fill the container"
+msgstr ""
+
+#: admin/metaboxes.php:600
+msgid "Sidebar options"
+msgstr ""
+
+#: admin/metaboxes.php:602
+msgid "Enable sidebar"
+msgstr ""
+
+#: admin/metaboxes.php:606
+msgid "Search field"
+msgstr ""
+
+#: admin/metaboxes.php:609
+msgid "Search description"
+msgstr ""
+
+#: admin/metaboxes.php:612
+msgid "Minimum keyword length"
+msgstr ""
+
+#: admin/metaboxes.php:613
+msgid "1 (Default)"
+msgstr ""
+
+#: admin/metaboxes.php:616
+msgid "Alphabetically ordered list"
+msgstr ""
+
+#: admin/metaboxes.php:619
+msgid "Thumbnail placeholder"
+msgstr ""
+
+#: admin/metaboxes.php:622
+msgid "Enable sidebar toggle"
+msgstr ""
+
+#: admin/metaboxes.php:625
+msgid "Open filters by default"
+msgstr ""
+
+#: admin/metaboxes.php:628
+msgid "Highlight map on filter"
+msgstr ""
+
+#: admin/metaboxes.php:633
+msgid "User Interface"
+msgstr ""
+
+#: admin/metaboxes.php:634
+msgid "Base color"
+msgstr ""
+
+#: admin/metaboxes.php:635
+msgid "Primary background"
+msgstr ""
+
+#: admin/metaboxes.php:636
+msgid "Secondary background"
+msgstr ""
+
+#: admin/metaboxes.php:637
+msgid "Headings color"
+msgstr ""
+
+#: admin/metaboxes.php:638
+msgid "Text color"
+msgstr ""
+
+#: admin/metaboxes.php:639
+msgid "Accent color"
+msgstr ""
+
+#: admin/metaboxes.php:642
+msgid "CSV Support"
+msgstr ""
+
+#: admin/metaboxes.php:645
+msgid "Link CSV file"
+msgstr ""
+
+#: admin/metaboxes.php:650
+msgid "Load Data"
+msgstr ""
+
+#: admin/metaboxes.php:653
+msgid "Custom CSS"
+msgstr ""
+
+#: mapplic.php:44
+msgid "Maps"
+msgstr ""
+
+#: mapplic.php:46
+msgid "Add New Map"
+msgstr ""
+
+#: mapplic.php:47
+msgid "New Map"
+msgstr ""
+
+#: mapplic.php:48
+msgid "Edit Map"
+msgstr ""
+
+#: mapplic.php:70
+msgid "Map List"
+msgstr ""
+
+#: mapplic.php:111
+msgid "Error: map with the specified ID doesn't exist!"
+msgstr ""
+
+#: mapplic.php:169
+msgid "Edit map"
+msgstr ""

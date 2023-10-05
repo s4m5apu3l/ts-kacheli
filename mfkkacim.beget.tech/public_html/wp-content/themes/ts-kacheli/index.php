@@ -10,7 +10,10 @@ get_header();
 
         <?php
         // Получаем последние 8 новостей
-        $pods = pods('banner', []);
+        $pods = pods('banner', [
+          'orderby' => 'order', // Сортировка по полю "order"
+          'order'   => 'ASC',  
+        ]);
 
         if ($pods->total() > 0) {
           while ($pods->fetch()) {
@@ -18,27 +21,32 @@ get_header();
             $title = $pods->field('title');
             $title_mini = $pods->field('title-mini');
             $url = $pods->field('url-custom');
+            $mobile_pic = $pods->field('photo-mobile');
 
             $post_id = $pods->id();
             $thumbnail_url = get_the_post_thumbnail_url($post_id);
+            $order = $pods->field('order');
+            $color_text = $pods->field('color_text');
+            $color_text = $color_text ? $color_text : 'ffffff';
         ?>  
             <div class="swiper-slide">
               <div class="max-[768px]:justify-end   flex flex-col items-start justify-center  w-full h-full">
-                <div class="max-[768px]:bg-[#00000099] max-[768px]:px-[40px] px-[80px] py-[40px] flex flex-col h-auto w-full">
-                  <img style="filter:brightness(0.7)" class="object-cover w-full h-full absolute left-0 right-0 top-0 bottom-0 z-[-1]" src="<?php echo $thumbnail_url; ?>" alt="">
-                  <span class="text-break max-[768px]:leading-[34px] max-[768px]:text-[30px] text-white text-[40px] leading-[46px] font-bold">
+                <div class="child max-[768px]:px-[40px] px-[80px] py-[40px] flex flex-col h-auto w-full">
+                  <img class="max-[768px]:hidden object-cover w-full h-full absolute left-0 right-0 top-0 bottom-0 z-[-1]" src="<?php echo $thumbnail_url; ?>" alt="">
+                  <img class="max-[768px]:block hidden object-cover w-full h-full absolute left-0 right-0 top-0 bottom-0 z-[-1]" src="<?php echo $mobile_pic['guid']; ?>" alt="">
+                  <span style="color: #<?php echo $color_text; ?>" class="text-dots-3 text-break max-[768px]:leading-[34px] max-[768px]:text-[30px] text-[40px] leading-[46px] font-bold">
                     <?php echo $title ?>
                   </span>
-                  <span class="text-break max-[768px]:mt-[20px] text-white text-[20px]  font-bold mt-[5px]">
+                  <span style="color: #<?php echo $color_text; ?>" class="text-break text-[20px]  font-bold mt-[5px]">
                     <?php echo $title_mini ?>
                   </span>
 
-                  <div class="max-[768px]:mt-[48px] mt-[32px]">
+                  <div class="max-[768px]:mt-auto mt-[32px]">
                     <?php  if ($url) :?>
-                      <a href="<?php echo $url; ?>" target="_blank" class="max-[768px]:leading-[18px] max-[768px]:p-0 max-[768px]:items-center max-[768px]:gap-[10px] max-[768px]:border-0 max-[768px]:flex block max-w-[200px] border-[3px] border-white px-[30px] py-[15px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
+                      <a style=" color: #<?php echo $color_text; ?>; border-color: #<?php echo $color_text; ?>" href="<?php echo $url; ?>" class="max-[768px]:leading-[18px] max-[768px]:p-0 max-[768px]:items-center max-[768px]:gap-[10px] max-[768px]:border-0 max-[768px]:flex block max-w-[200px] border-[3px] px-[30px] py-[15px] text-center uppercase text-base font-bold  hover:bg-main hover:border-main hover-important transition-all duration-200">
                         Подробнее
                         <svg class="max-[768px]:block hidden" width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1.56215 8.384e-07L5.46053 4.12286C5.63156 4.30369 5.76723 4.51838 5.85979 4.75468C5.95236 4.99097 6 5.24423 6 5.5C6 5.75577 5.95236 6.00903 5.85979 6.24532C5.76723 6.48162 5.63156 6.69631 5.46053 6.87714L1.56215 11L-6.4419e-07 9.34712L3.6406 5.5L0.00294658 1.65288L1.56215 8.384e-07Z" fill="#F3F2EA" />
+                          <path d="M1.56215 8.384e-07L5.46053 4.12286C5.63156 4.30369 5.76723 4.51838 5.85979 4.75468C5.95236 4.99097 6 5.24423 6 5.5C6 5.75577 5.95236 6.00903 5.85979 6.24532C5.76723 6.48162 5.63156 6.69631 5.46053 6.87714L1.56215 11L-6.4419e-07 9.34712L3.6406 5.5L0.00294658 1.65288L1.56215 8.384e-07Z" fill="#<?php echo $color_text; ?>" />
                         </svg>
                       </a>
                     <?php endif; ?>
@@ -62,6 +70,12 @@ get_header();
         <div class="counter text-white"></div>
       </div>
     </div>
+    <style>
+      .hover-important:hover {
+        color: white !important;
+        border-color: #C32E44 !important;
+      }
+    </style>
   </section>
 
   <!-- news section -->
@@ -127,12 +141,14 @@ get_header();
                     </div>
                     <div class=" pl-[30px] flex items-center gap-[10px]">
                       <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
-                      <span class="text-white text-[14px] font-bold">
-                        <?php
-                        $formatted_date = date('d.m.Y', strtotime($date));
-                        echo $formatted_date;
-                        ?>
-                      </span>
+                      <?php if (!empty($date) && $date !== '0000-00-00') { ?>
+                        <span class="text-white text-[14px] font-bold">
+                          <?php
+                          $formatted_date = date('d.m.Y', strtotime($date));
+                          echo $formatted_date;
+                          ?>
+                        </span>
+                      <?php } ?>
                     </div>
                   </div>
                 </a>
@@ -179,16 +195,18 @@ get_header();
                       </div>
                     </div>
                     <div class=" pl-[30px] flex items-center gap-[10px]">
+                    <?php if (!empty($date_start) && $date_start !== '0000-00-00' && !empty($date_end) && $date_end !== '0000-00-00') { ?>
                       <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
-                      <span class="text-white text-[14px] font-bold">
-                        <?php
-                        $formatted_date_start = date('d.m.Y', strtotime($date_start));
-                        echo $formatted_date_start;
-                        ?> - <?php
-                        $formatted_date_end = date('d.m.Y', strtotime($date_end));
-                        echo $formatted_date_end 
-                        ?>
-                      </span>
+                        <span class="text-white text-[14px] font-bold">
+                          <?php
+                          $formatted_date_start = date('d.m.Y', strtotime($date_start));
+                          echo $formatted_date_start;
+                          ?> - <?php
+                          $formatted_date_end = date('d.m.Y', strtotime($date_end));
+                          echo $formatted_date_end;
+                          ?>
+                        </span>
+                      <?php } ?>
                     </div>
                   </div>
                 </a>
@@ -236,16 +254,18 @@ get_header();
 
                     </div>
                     <div class="pl-[30px] flex items-center gap-[10px]">
+                      <?php if (!empty($date_start) && $date_start !== '0000-00-00' && !empty($date_end) && $date_end !== '0000-00-00') { ?>
                       <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
-                      <span class="text-white text-[14px] font-bold">
-                      <?php
-                        $formatted_date_start = date('d.m.Y', strtotime($date_start));
-                        echo $formatted_date_start;
-                        ?> - <?php
-                        $formatted_date_end = date('d.m.Y', strtotime($date_end));
-                        echo $formatted_date_end 
-                        ?>
-                      </span>
+                        <span class="text-white text-[14px] font-bold">
+                          <?php
+                          $formatted_date_start = date('d.m.Y', strtotime($date_start));
+                          echo $formatted_date_start;
+                          ?> - <?php
+                          $formatted_date_end = date('d.m.Y', strtotime($date_end));
+                          echo $formatted_date_end;
+                          ?>
+                        </span>
+                      <?php } ?>
                     </div>
                   </div>
                 </a>
