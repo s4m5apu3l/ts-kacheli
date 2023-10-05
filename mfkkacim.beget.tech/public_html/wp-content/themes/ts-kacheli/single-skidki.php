@@ -37,16 +37,18 @@ if ($pods->exists()) {
                   <img src="<?php echo $image['guid']; ?>" alt="<?php echo $image['post_title']; ?>" class=" filter brightness-75 object-cover z-[-1] absolute right-0 left-0 top-0 bottom-0 w-full h-full">
                   <div class="flex w-full justify-between">
                     <div class=" flex items-center gap-[10px]">
+                    <?php if (!empty($date_start) && $date_start !== '0000-00-00' && !empty($date_end) && $date_end !== '0000-00-00') { ?>
                       <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
-                      <span class="max-[425px]:text-[10px] text-white text-[14px] font-bold">
-                      <?php
-                        $formatted_date_start = date('d.m.Y', strtotime($date_start));
-                        echo $formatted_date_start;
-                        ?> - <?php
-                              $formatted_date_end = date('d.m.Y', strtotime($date_end));
-                              echo $formatted_date_end
-                              ?>
-                      </span>
+                        <span class="text-white text-[14px] font-bold">
+                          <?php
+                          $formatted_date_start = date('d.m.Y', strtotime($date_start));
+                          echo $formatted_date_start;
+                          ?> - <?php
+                          $formatted_date_end = date('d.m.Y', strtotime($date_end));
+                          echo $formatted_date_end;
+                          ?>
+                        </span>
+                      <?php } ?>
                     </div>
                     <div class="max-[425px]:text-[10px] py-[6px] px-[21px] text-base font-bold leading-[18px] text-white active-news-link">
                       Скидки

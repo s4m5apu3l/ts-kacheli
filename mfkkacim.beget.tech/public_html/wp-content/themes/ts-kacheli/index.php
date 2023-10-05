@@ -140,8 +140,8 @@ get_header();
                       </div>
                     </div>
                     <div class=" pl-[30px] flex items-center gap-[10px]">
-                      <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
                       <?php if (!empty($date) && $date !== '0000-00-00') { ?>
+                      <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
                         <span class="text-white text-[14px] font-bold">
                           <?php
                           $formatted_date = date('d.m.Y', strtotime($date));

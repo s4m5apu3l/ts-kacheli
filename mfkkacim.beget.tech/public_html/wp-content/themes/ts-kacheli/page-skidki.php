@@ -52,6 +52,8 @@ get_header();
 
             foreach( $my_posts as $post ){
               setup_postdata( $post );
+              $date_start = get_post_meta(get_the_id(), 'date-time-start', true);
+              $date_end = get_post_meta(get_the_id(), 'date-time-end', true);
                 ?> 
                   <a href="<?php the_permalink()?>" class="max-[490px]:h-[270px] max-[525px]:h-[350px] max-[768px]:h-[400px] h-[500px] max-[680px]:max-w-full group transition-all duration-200 flex items-end w-full relative">
                     <img class="object-cover absolute z-0 w-full h-full left-0 right-0 top-0 bottom-0" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
@@ -67,14 +69,18 @@ get_header();
                         </span>
                       </div>
                       <div class="max-[768px]:pl-[10px] mt-auto pl-[30px] flex items-center gap-[10px]">
-                        <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri()?>/assets/img/time.svg" alt="">
-                        <span class="max-[490px]:text-[12px] text-white text-[14px] font-bold">
+                      <?php if (!empty($date_start) && $date_start !== '0000-00-00' && !empty($date_end) && $date_end !== '0000-00-00') { ?>
+                      <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
+                        <span class="text-white text-[14px] font-bold">
                           <?php
-                            $date = get_post_meta(get_the_id(), 'date-time', true);
-                            $formatted_date = date('d.m.Y', strtotime($date));
-                            echo $formatted_date;
+                          $formatted_date_start = date('d.m.Y', strtotime($date_start));
+                          echo $formatted_date_start;
+                          ?> - <?php
+                          $formatted_date_end = date('d.m.Y', strtotime($date_end));
+                          echo $formatted_date_end;
                           ?>
                         </span>
+                      <?php } ?>
                       </div>
                     </div>
                   </a>
