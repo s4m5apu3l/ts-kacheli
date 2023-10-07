@@ -33,33 +33,73 @@ get_header();
     <div class=" l-wrapper max-[768px]:mt-[40px] mt-[80px] max-[560px]:px-[22px] max-[1250px]:px-[50px] max-[1400px]:px-[100px] px-[178px] overflow-x-hidden">
       <div id='news-container' class="grid-items-news gap-[1px] max-[850px]:mt-[60px] mt-[80px] max-[950px]:grid-cols-2  grid-cols-3 grid">
 
-        <?php
-        // параметры по умолчанию
-        $my_posts = get_posts(array(
+      <?php
+        // Создаем массив для всех постов
+        $all_posts = array();
+
+        // Запрос для типа записи 'news'
+        $news_posts = get_posts(array(
           'numberposts' => -1,
-          'offset' => 0,
-          'category'    => 0,
-          'orderby'     => 'date DESC',
-          'order'       => 'DESC',
-          'include'     => array(),
-          'exclude'     => array(),
-          'meta_key'    => '',
-          'meta_value'  => '',
-          'post_type'   => 'news',
-          'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+          'post_type' => 'news',
+          'orderby' => 'date',
+          'order' => 'DESC',
         ));
 
-        global $post;
+        // Добавляем новости в массив
+        $all_posts = array_merge($all_posts, $news_posts);
 
-        foreach ($my_posts as $post) {
+        // Запрос для типа записи 'aksii'
+        $aksii_posts = get_posts(array(
+          'numberposts' => -1,
+          'post_type' => 'aksii',
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ));
+
+        // Добавляем акции в массив
+        $all_posts = array_merge($all_posts, $aksii_posts);
+
+        // Запрос для типа записи 'skidki'
+        $skidki_posts = get_posts(array(
+          'numberposts' => -1,
+          'post_type' => 'skidki',
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ));
+
+        // Добавляем скидки в массив
+        $all_posts = array_merge($all_posts, $skidki_posts);
+
+        usort($all_posts, function($a, $b) {
+          return strtotime($b->post_date) - strtotime($a->post_date);
+        });
+
+        // Выводим все посты
+        foreach ($all_posts as $post) {
+          
           setup_postdata($post);
-        ?>
-          <a href="<?php the_permalink() ?>" class="max-[490px]:h-[270px] max-[525px]:h-[350px] max-[768px]:h-[400px] h-[500px] max-[680px]:max-w-full group transition-all duration-200 flex items-end w-full relative">
+          $date = get_post_meta(get_the_id(), 'date_time', true);
+          $post_type = get_post_type();
+          ?>
+                  <a href="<?php the_permalink() ?>" class="max-[490px]:h-[270px] max-[525px]:h-[350px] max-[768px]:h-[400px] h-[500px] max-[680px]:max-w-full group transition-all duration-200 flex items-end w-full relative">
             <img class="object-cover absolute z-0 w-full h-full left-0 right-0 top-0 bottom-0" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 
             <div style='height:50%' class="flex flex-col max-[490px]:pb-[10px] max-[768px]:h-[50%] max-[768px]:pt-[10px] group-hover:bg-[#C32E4499] transition-all duration-200 bg-[#00000099] z-20 w-full h-[50%] pb-[22px] pt-[67px]">
               <div class="max-[490px]:h-[20px] max-[768px]:pl-[10px] max-[768px]:pr-[13px] max-[425px]:text-[10px] max-[768px]:w-fit max-w-[130px] flex items-center bg-[#F3F2EA] py-[6px] pl-[30px] pr-[22px] text-black text-base font-bold">
-                Новости
+              <?php
+                // Вывод заголовка и текста в зависимости от типа записи
+                switch ($post_type) {
+                  case 'news':
+                    echo 'Новости';
+                    break;
+                  case 'aksii':
+                    echo 'Акции';
+                    break;
+                  case 'skidki':
+                    echo 'Скидки';
+                    break;
+                }
+                ?>
               </div>
               <div class="max-[490px]:mt-[10px] max-[768px]:px-[10px] px-[30px] mt-[20px]">
                 <span class="max-[768px]:text-base max-[490px]:text-[12px] text-dots text-white text-[20px] font-bold leading-[23px]">
@@ -67,14 +107,15 @@ get_header();
                 </span>
               </div>
               <div class="max-[768px]:pl-[10px] mt-auto pl-[30px] flex items-center gap-[10px]">
+              <?php if (!empty($date) && $date !== '0000-00-00') { ?>
                 <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
-                <span class="max-[490px]:text-[12px] text-white text-[14px] font-bold">
-                  <?php
-                  $date = get_post_meta(get_the_id(), 'date_time', true);
-                  $formatted_date = date('d.m.Y', strtotime($date));
-                  echo $formatted_date;
-                  ?>
-                </span>
+                  <span class="text-white text-[14px] font-bold">
+                    <?php
+                    $formatted_date = date('d.m.Y', strtotime($date));
+                    echo $formatted_date;
+                    ?>
+                  </span>
+                <?php } ?>
               </div>
             </div>
           </a>
@@ -83,131 +124,8 @@ get_header();
 
         wp_reset_postdata(); // сброс
         ?>
-
-        <?php
-        // параметры по умолчанию
-        $my_posts = get_posts(array(
-          'numberposts' => -1,
-          'offset' => 0,
-          'category'    => 0,
-          'orderby'     => 'date DESC',
-          'order'       => 'DESC',
-          'include'     => array(),
-          'exclude'     => array(),
-          'meta_key'    => '',
-          'meta_value'  => '',
-          'post_type'   => 'aksii',
-          'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-        ));
-
-        global $post;
-
-        foreach ($my_posts as $post) {
-          setup_postdata($post);
-
-          $pod = pods($post->post_type, $post->ID);
-
-          $date_start = $pod->field('date-time-start');
-          $date_end = $pod->field('date-time-end');
-        ?>
-          <a href="<?php the_permalink() ?>" class="max-[490px]:h-[270px] max-[525px]:h-[350px] max-[768px]:h-[400px] h-[500px] max-[680px]:max-w-full group transition-all duration-200 flex items-end w-full relative">
-            <img class="object-cover absolute z-0 w-full h-full left-0 right-0 top-0 bottom-0" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-
-            <div style='height:50%' class="flex flex-col max-[490px]:pb-[10px] max-[768px]:h-[50%] max-[768px]:pt-[10px] group-hover:bg-[#C32E4499] transition-all duration-200 bg-[#00000099] z-20 w-full h-[50%] pb-[22px] pt-[67px]">
-              <div class="max-[490px]:h-[20px] max-[768px]:pl-[10px] max-[768px]:pr-[13px] max-[425px]:text-[10px] max-[768px]:w-fit max-w-[130px] flex items-center bg-[#F3F2EA] py-[6px] pl-[30px] pr-[22px] text-black text-base font-bold">
-                Акции
-              </div>
-              <div class="max-[490px]:mt-[10px] max-[768px]:px-[10px] px-[30px] mt-[20px]">
-                <span class="max-[768px]:text-base max-[490px]:text-[12px] text-dots text-white text-[20px] font-bold leading-[23px]">
-                  <?php echo the_title() ?>
-                </span>
-              </div>
-              <div class="max-[768px]:pl-[10px] mt-auto pl-[30px] flex items-center gap-[10px]">
-                <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
-                <span class="max-[490px]:text-[12px] text-white text-[14px] font-bold">
-                <?php
-                        $formatted_date_start = date('d.m.Y', strtotime($date_start));
-                        echo $formatted_date_start;
-                        ?> - <?php
-                        $formatted_date_end = date('d.m.Y', strtotime($date_end));
-                        echo $formatted_date_end 
-                        ?>
-                </span>
-              </div>
-            </div>
-          </a>
-        <?php
-        }
-
-        wp_reset_postdata(); // сброс
-        ?>
-
-<?php
-        $my_posts = get_posts(array(
-          'numberposts' => -1,
-          'offset' => 0,
-          'category'    => 0,
-          'orderby'     => 'date DESC',
-          'order'       => 'DESC',
-          'include'     => array(),
-          'exclude'     => array(),
-          'meta_key'    => '',
-          'meta_value'  => '',
-          'post_type'   => 'skidki',
-          'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-        ));
-
-        global $post;
-
-        foreach ($my_posts as $post) {
-          setup_postdata($post);
-
-          $pod = pods($post->post_type, $post->ID);
-
-          $date_start = $pod->field('date-time-start');
-          $date_end = $pod->field('date-time-end');
-        ?>
-          <a href="<?php the_permalink() ?>" class="max-[490px]:h-[270px] max-[525px]:h-[350px] max-[768px]:h-[400px] h-[500px] max-[680px]:max-w-full group transition-all duration-200 flex items-end w-full relative">
-            <img class="object-cover absolute z-0 w-full h-full left-0 right-0 top-0 bottom-0" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-
-            <div style='height:50%' class="flex flex-col max-[490px]:pb-[10px] max-[768px]:h-[50%] max-[768px]:pt-[10px] group-hover:bg-[#C32E4499] transition-all duration-200 bg-[#00000099] z-20 w-full h-[50%] pb-[22px] pt-[67px]">
-              <div class="max-[490px]:h-[20px] max-[768px]:pl-[10px] max-[768px]:pr-[13px] max-[425px]:text-[10px] max-[768px]:w-fit max-w-[130px] flex items-center bg-[#F3F2EA] py-[6px] pl-[30px] pr-[22px] text-black text-base font-bold">
-                Скидки
-              </div>
-              <div class="max-[490px]:mt-[10px] max-[768px]:px-[10px] px-[30px] mt-[20px]">
-                <span class="max-[768px]:text-base max-[490px]:text-[12px] text-dots text-white text-[20px] font-bold leading-[23px]">
-                  <?php echo the_title() ?>
-                </span>
-              </div>
-              <div class="max-[768px]:pl-[10px] mt-auto pl-[30px] flex items-center gap-[10px]">
-                <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
-                <span class="max-[490px]:text-[12px] text-white text-[14px] font-bold">
-                <?php
-                        $formatted_date_start = date('d.m.Y', strtotime($date_start));
-                        echo $formatted_date_start;
-                        ?> - <?php
-                        $formatted_date_end = date('d.m.Y', strtotime($date_end));
-                        echo $formatted_date_end 
-                        ?>
-                </span>
-              </div>
-            </div>
-          </a>
-        <?php
-        }
-
-        wp_reset_postdata(); // сброс
-        ?>
-
 
       </div>
-      <!-- <div class=" max-[768px]:mt-[40px] max-w-[210px] mx-auto mt-[60px] relative z-20">
-          <a href="javascript:void(0)"
-            id='load-more-news'
-            class="block border-[3px] border-white px-[30px] py-[19px] leading-[16px] text-center uppercase text-base font-bold text-white hover:bg-main hover:border-main transition-all duration-200">
-            ЕЩЕ
-          </a>
-        </div> -->
     </div>
   </section>
 </main>

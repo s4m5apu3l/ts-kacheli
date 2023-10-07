@@ -101,7 +101,106 @@ get_header();
     <div class="max-[768px]:mt-[40px] mt-[80px] max-[560px]:px-[22px] max-[1250px]:px-[50px] max-[1400px]:px-[100px] px-[178px] overflow-x-hidden">
       <div class="swiper  max-w-[1180px] js-swiper-news">
         <div class="swiper-wrapper">
+        <?php
+        // Создаем массив для всех постов
+        $all_posts = array();
 
+        // Запрос для типа записи 'news'
+        $news_posts = get_posts(array(
+          'numberposts' => -1,
+          'limit' => 3,
+          'post_type' => 'news',
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ));
+
+        // Добавляем новости в массив
+        $all_posts = array_merge($all_posts, $news_posts);
+
+        // Запрос для типа записи 'aksii'
+        $aksii_posts = get_posts(array(
+          'numberposts' => -1,
+          'limit' => 3,
+          'post_type' => 'aksii',
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ));
+
+        // Добавляем акции в массив
+        $all_posts = array_merge($all_posts, $aksii_posts);
+
+        // Запрос для типа записи 'skidki'
+        $skidki_posts = get_posts(array(
+          'numberposts' => -1,
+          'limit' => 3,
+          'post_type' => 'skidki',
+          'orderby' => 'date',
+          'order' => 'DESC',
+        ));
+
+        // Добавляем скидки в массив
+        $all_posts = array_merge($all_posts, $skidki_posts);
+
+        usort($all_posts, function($a, $b) {
+          return strtotime($b->post_date) - strtotime($a->post_date);
+        });
+
+        // Выводим все посты
+        foreach ($all_posts as $post) {
+          
+          setup_postdata($post);
+          $date = get_post_meta(get_the_id(), 'date_time', true);
+          $post_type = get_post_type();
+          ?>
+            <div class="swiper-slide">
+              <a href="<?php the_permalink() ?>"  class="max-[680px]:max-w-full group transition-all duration-200 max-w-[400px] h-[500px] flex items-end w-full relative">
+                <img class="object-cover absolute z-0 w-full h-full left-0 right-0 top-0 bottom-0" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+  
+                  <div class="group-hover:bg-[#C32E4499] flex flex-col justify-between transition-all duration-200 bg-[#00000099] z-20 w-full h-[250px] pb-[22px] pt-[67px]">
+                    <div class="flex flex-col">
+
+                      <div class="max-w-[130px] flex items-center bg-[#F3F2EA] py-[6px] pl-[30px] pr-[22px] text-black text-base font-bold">
+                      <?php
+                        // Вывод заголовка и текста в зависимости от типа записи
+                        switch ($post_type) {
+                          case 'news':
+                            echo 'Новости';
+                            break;
+                          case 'aksii':
+                            echo 'Акции';
+                            break;
+                          case 'skidki':
+                            echo 'Скидки';
+                            break;
+                        }
+                      ?>
+                      </div>
+                      <div class="px-[30px] mt-[20px]">
+                        <span class="text-dots text-white text-[20px] font-bold leading-[23px]">
+                          <?php echo $title ?>
+                        </span>
+                      </div>
+                    </div>
+                    <div class=" pl-[30px] flex items-center gap-[10px]">
+                      <?php if (!empty($date) && $date !== '0000-00-00') { ?>
+                      <img class="w-[20px] h-[20px]" src="<?php echo get_template_directory_uri() ?>/assets/img/time.svg" alt="">
+                        <span class="text-white text-[14px] font-bold">
+                          <?php
+                          $formatted_date = date('d.m.Y', strtotime($date));
+                          echo $formatted_date;
+                          ?>
+                        </span>
+                      <?php } ?>
+                    </div>
+                  </div>
+              </a>
+            </div>
+        <?php
+        }
+
+        wp_reset_postdata(); // сброс
+        ?>
+<!-- 
           <?php
           // Получаем последние 8 новостей
           $pods = pods('news', [
@@ -273,7 +372,7 @@ get_header();
           <?php
             }
           }
-          ?>
+          ?> -->
 
         </div>
       </div>
